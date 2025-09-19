@@ -1,5 +1,7 @@
 import com.app.mail.GmailSender;
 
+import java.io.File;
+
 public class Main {
     public static void main(String[] args) {
         GmailSender sender = new GmailSender();
@@ -7,7 +9,8 @@ public class Main {
         String to = "fofen33945@camjoint.com";
         String subject = "Testing Purpose";
         String body = "This is only for testing purpose...!!!";
-        boolean b =  sender.sendEmail(from,to,subject,body);
+        File file = new File("C:\\Users\\priya\\Downloads\\java_interview_qa.pdf");
+        boolean b =  sender.sendEmail(from,to,subject,body,file);
 
         if(b){
             System.out.println("Congrats...Your email sent successfully...!!!");
